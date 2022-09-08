@@ -97,3 +97,7 @@ body {
         display: flex;
     }
 }
+
+body h1 {
+    color: #ffffff;
+}
