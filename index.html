@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Grdanjski</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/indexpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,22 +18,49 @@
 <body>
     <nav class="navbar">
         <div class="navbar-title">
-            <a href="#">Jan Grdanjski</a>
+            <a href="index.html">Jan Grdanjski</a>
         </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <a href="#" class="navbar-toggle">
+            <span class="navbar-bar"></span>
+            <span class="navbar-bar"></span>
+            <span class="navbar-bar"></span>
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">TSRB</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="tsrb.html">TSRB</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
-    <h1>Work in progress</h1>
+    <main>
+        <section class="glass">
+            <div class="grid-container">
+                <div class="grid-column">
+                    <div class="grid-item">
+                        <img src="assets/tsrb.webp" alt="">
+                        <a href="tsrb.html"><span>TSRB</span></a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/about.webp" alt="">
+                        <a href="about.html"><span>About Me</span></a>
+                    </div>
+                </div>
+                <div class="grid-column">
+                    <div class="grid-item">
+                        <img src="assets/projects.webp" alt="">
+                        <a href="projects.html"><span>Projects</span></a>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/instrukcije.webp" alt="">
+                        <a href="instrukcije.html"><span>Instrukcije</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+    </main>
 </body>
 
 </html>
