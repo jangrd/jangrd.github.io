@@ -1,0 +1,14 @@
+.temp {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #20305b, #16213E);
+}
+
+h1 {
+    font-size: 5rem;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #ffffff;
+}
