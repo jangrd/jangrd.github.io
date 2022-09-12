@@ -12,3 +12,24 @@ h3 {
     font-size: 2rem;
     color: #ffffff;
 }
+
+main {
+    align-items: baseline;
+    justify-content: left;
+}
+
+.section-title {
+    font-size: 3rem;
+}
+
+.url {
+    font-size: 1.5rem;
+    color: #E94560;
+    margin-left: 2rem;
+}
+
+.flex-container {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
