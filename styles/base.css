@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 main {
     min-height: 100vh;
     background: linear-gradient(to right top, #20305b, #16213E);
