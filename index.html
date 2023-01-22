@@ -6,61 +6,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Grdanjski</title>
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/indexpage.css">
+    <link rel="stylesheet" href="./stlyes/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c6b2b56fd1.js" crossorigin="anonymous"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-title">
-            <a href="index.html">Jan Grdanjski</a>
-        </div>
-        <a href="#" class="navbar-toggle">
-            <span class="navbar-bar"></span>
-            <span class="navbar-bar"></span>
-            <span class="navbar-bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="tsrb.html">TSRB</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <section class="glass">
-            <div class="grid-container">
-                <div class="grid-column">
-                    <div class="grid-item">
-                        <img src="assets/tsrb.webp" alt="">
-                        <a href="tsrb.html"><span>TSRB</span></a>
-                    </div>
-                    <div class="grid-item">
-                        <img src="assets/about.webp" alt="">
-                        <a href="about.html"><span>About Me</span></a>
-                    </div>
+    <div id="parallax">
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1 class="text-logo"><span>J</span>an.</h1>
+                    <ul id="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./racunalne-mreze/kriptografija-u-racunalnoj-komunikaciji">TŠRB</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <i class="fa-solid fa-x" onclick="menuClose()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Hobbyist dev</p>
+                    <h1>Hi, I'm <span>Jan</span> Grdanjski</h1>
                 </div>
-                <div class="grid-column">
-                    <div class="grid-item">
-                        <img src="assets/projects.webp" alt="">
-                        <a href="projects.html"><span>Projects</span></a>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="image">
+                        <img src="assets/portrait.png" alt="portrait">
                     </div>
-                    <div class="grid-item">
-                        <img src="assets/instrukcije.webp" alt="">
-                        <a href="instrukcije.html"><span>Instrukcije</span></a>
+                    <div class="about-text">
+                        <h1 class="subtitle">About me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio accusamus nam aperiam inventore, laborum necessitatibus iste amet nisi doloribus magni vel! Ullam exercitationem est molestiae consequuntur! Facilis, vel pariatur id
+                            ipsa delectus exercitationem repudiandae beatae nesciunt sequi rem deleniti inventore minus esse dolor eligendi laboriosam illo similique quod quis minima accusantium debitis. Rerum quo, libero magnam, nostrum explicabo sint
+                            veritatis deserunt aut enim, cupiditate repellendus? Consequatur soluta voluptate fugit eos quia libero odit ipsum dolorum nulla nesciunt inventore error, perspiciatis eius debitis itaque possimus molestias! Voluptate accusamus
+                            earum vitae expedita neque saepe. Unde, nulla quod doloribus mollitia expedita non corporis.</p>
+                        <div class="tabs">
+                            <p class="tab-link active" onclick="changeTab(event, 'skills')">Skills</p>
+                            <p class="tab-link" onclick="changeTab(event, 'projects')">Projects</p>
+                            <p class="tab-link" onclick="changeTab(event, 'education')">Education</p>
+                        </div>
+                        <div class="content active" id="skills">
+                            <ul>
+                                <li><span>Desktop Dev</span><br>Fully featured desktop apps</li>
+                                <li><span>CLI Dev</span><br>CLI based apps for the terminal</li>
+                                <li><span>Backend Dev</span><br>APIs and databases for full stack apps</li>
+                            </ul>
+                        </div>
+                        <div class="content" id="projects">
+                            <ul>
+                                <li><span>Vinylist</span><br>Vinylist @ Infokup 2023 - Razvoj softvera</li>
+                                <li><span>FexiOS</span><br>Operating System @ TŠRB Završni rad 2024</li>
+                                <li><span>SGL</span><br>C++ GUI library</li>
+                            </ul>
+                        </div>
+                        <div class="content" id="education">
+                            <ul>
+                                <li>
+                                    <span><i class="fa-regular fa-circle-check"></i>2012 - 2020</span><br> Osnovna Škola Milana Langa, Bregana
+                                </li>
+                                <li><span><i class="fa-regular fa-clock"></i>2020 - 2024</span><br>Tehnička Škola Ruđera Boškovića, Zagreb
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="circle" id="circle1"></div>
-        <div class="circle" id="circle2"></div>
-    </main>
+        </div>
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">My services</h1>
+                <div class="list">
+                    <div>
+                        <i class="fa-solid fa-pencil"></i>
+                        <h2>Tutoring</h2>
+                        <ul>
+                            <li>
+                                <p>Programming in Python, C, C++, C#, JavaScript</p>
+                            </li>
+                            <li>
+                                <p>Computer science</p>
+                            </li>
+                            <li>
+                                <p>Maths - Middle & High School</p>
+                            </li>
+                        </ul>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Software development</h2>
+                        <p>
+                            Create an app or tool, be it for the Web, desktop or mobile using Python, C, C++, C# and JavaScript with popular frameworks like React, Vue, WPF, .NET, Django, Tkinter and others.
+                        </p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <h2>Logo Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos illo exercitationem cupiditate nobis id tempora reiciendis soluta veritatis provident laudantium.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">My work</h1>
+                <div class="list">
+                    <div class="work">
+                        <img src="./assets/work-1.png" alt="work1">
+                        <div class="layer">
+                            <h3>Lorem, ipsum.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquid ea quas molestias! Quo, accusamus.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/work-2.png" alt="work2">
+                        <div class="layer">
+                            <h3>Lorem, ipsum.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquid ea quas molestias! Quo, accusamus.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/work-3.png" alt="work3">
+                        <div class="layer">
+                            <h3>Lorem, ipsum.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquid ea quas molestias! Quo, accusamus.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button">See more</a>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <h1 class="subtitle">Contact me</h1>
+                <div class="flex">
+                    <div class="socials">
+                        <a class="link" href="https://github.com/sh0tzz" target="_blank" rel="noreferrer"><i class="fa-brands fa-github "></i></a>
+                        <a class="link" href="https://www.instagram.com/jangrdanjski/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="email" onclick="clipboardCopy('lubranier@gmail.com')">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p>lubranier@gmail.com</p>
+                            <p class="tooltip">(Click to copy!)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/AboutTabs.js"></script>
+    <script src="./js/EmailClipboard.js"></script>
+    <script src="./js/MenuButtons.js"></script>
 </body>
 
 </html>
