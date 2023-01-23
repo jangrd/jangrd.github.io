@@ -331,6 +331,10 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
+    #parallax {
+        background: url(../assets/phone-background.png) no-repeat fixed 100%;
+        background-size: cover;
+    }
     #header {
         nav {
             ul {
@@ -359,8 +363,6 @@ nav {
                 display: block;
             }
         }
-        background: url(../assets/phone-background.png) no-repeat fixed 100%;
-        background-size: cover;
         .header-text {
             margin-top: 100%;
             font-size: 16px;
