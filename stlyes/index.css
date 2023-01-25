@@ -50,6 +50,7 @@ nav .logo {
 nav .logo-link {
   text-decoration: none;
   color: inherit;
+  color: #ffffff;
 }
 nav .text-logo {
   -webkit-user-select: none;
