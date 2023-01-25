@@ -46,7 +46,13 @@ nav {
     .logo {
         width: 140px;
     }
+    .logo-link {
+        text-decoration: none;
+        color: inherit;
+    }
     .text-logo {
+        user-select: none;
+        cursor: pointer;
         padding-right: 50px;
         font-size: 45px;
         span {
