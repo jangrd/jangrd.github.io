@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161819;
+  color: #ffffff;
+}
+
+#header {
+  width: 100%;
+}
+#header .header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+#header .header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+#header .header-text h1 span {
+  color: #ff004f;
+}
+
+.container {
+  background: linear-gradient(#080808, rgba(8, 8, 8, 0));
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+nav .logo {
+  width: 140px;
+}
+nav .logo-link {
+  text-decoration: none;
+  color: inherit;
+  color: #ffffff;
+}
+nav .text-logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding-right: 50px;
+  font-size: 45px;
+}
+nav .text-logo span {
+  color: #ff004f;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav .fa-bars,
+nav .fa-x {
+  display: none;
+}
+
+.content {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .selector {
+  border-radius: 10px;
+  list-style: none;
+  width: 60%;
+  background-color: #1D1F20;
+}
+.content .selector li {
+  border-color: #484E51;
+  border-style: solid;
+  border-width: 1px;
+  padding: 0.5rem;
+}
+.content .selector li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.content .selector li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.content .selector li h1 {
+  margin-left: 3rem;
+}
+.content .selector li a {
+  margin-left: 5rem;
+  color: #ffffff;
+}/*# sourceMappingURL=non-index.css.map */
