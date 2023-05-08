@@ -349,7 +349,7 @@ nav .fa-x {
 @media only screen and (max-width: 600px) {
   #parallax {
     background: url(../assets/phone-background.png) no-repeat 100%;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
   }
   #header nav ul {
