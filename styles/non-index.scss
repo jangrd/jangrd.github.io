@@ -112,8 +112,12 @@ nav {
                 margin-left: 3rem;
             }
             a {
+                text-decoration: none;
                 margin-left: 5rem;
                 color: #ffffff;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

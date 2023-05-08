@@ -11,23 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c6b2b56fd1.js" crossorigin="anonymous"></script>
+    <script src="/components/NavBar.js" defer></script>
 </head>
 
 <body>
     <div id="parallax">
         <div id="header">
-            <div class="container" id="navdiv">
-                <nav>
-                    <a class="logo-link" href="./index"><h1 class="text-logo"><span>J</span>an.</h1></a>
-                    <ul id="menu">
-                        <li><a href="./index">Home</a></li>
-                        <li><a href="./tsrb">TŠRB</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">About</a></li>
-                        <i class="fa-solid fa-x" onclick="menuClose()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
-                </nav>
+            <nav-bar></nav-bar>
+            <div class="container">
                 <div class="header-text">
                     <p>Hobbyist dev, DJ</p>
                     <h1>Hi, I'm <span>Jan</span> Grdanjski</h1>
@@ -42,7 +33,8 @@
                     </div>
                     <div class="about-text">
                         <h1 class="subtitle">About me</h1>
-                        <p>Hi, I'm Jan Grdanjski. I'm currently attending Technical School Ruđer Bošković in Zagreb, Croatia,
+                        <p>
+                            Hi, I'm Jan Grdanjski. I'm currently attending Technical School Ruđer Bošković in Zagreb, Croatia,
                             as a Computer Science Technician. My hobbies are computers, programming and DJing (and making DJ
                             equipment in the future wink).
                             I'm mostly interested in desktop development, systems programming, backends and most under-the-hood stuff.
@@ -50,7 +42,8 @@
                             JavaScript (with and without Node.js), Assembly languages, HTML, CSS (usually Sass) and use
                             frameworks like Express.js, Vue, Django and React. I'm familiar with both SQL and NoSQL databases,
                             usually preferring NoSQL. My go-to for SQL databases is SQLite and for NoSQL databases it's MongoDB.
-                            I'm always interested to collab on projects so just hit me up.</p>
+                            I'm always interested to collab on projects so just hit me up.
+                        </p>
                         <div class="tabs">
                             <p class="tab-link active" onclick="changeTab(event, 'coding')">Coding</p>
                             <p class="tab-link" onclick="changeTab(event, 'dj')">DJ</p>
