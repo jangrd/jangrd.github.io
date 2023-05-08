@@ -348,9 +348,7 @@ nav .fa-x {
 
 @media only screen and (max-width: 600px) {
   #parallax {
-    background: url(../assets/phone-background.png) no-repeat 100%;
-    background-attachment: fixed;
-    background-size: cover;
+    background-attachment: scroll;
   }
   #header nav ul {
     background-color: #ff004f;
