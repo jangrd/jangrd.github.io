@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jan Grdanjski">
     <title>Jan Grdanjski</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c6b2b56fd1.js" crossorigin="anonymous"></script>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- scripts -->
     <script src="/components/NavBar.js" defer></script>
+    <script src="/js/AboutTabs.js" defer></script>
+    <script src="/js/MenuButtons.js" defer></script>
 </head>
 
 <body>
@@ -89,12 +96,30 @@
                 <h1 class="subtitle">My services</h1>
                 <div class="list">
                     <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h4>Software development</h4>
+                        <p>
+                            Create an app or tool, be it for the Web, desktop or mobile using Python, C, C++, C# and JavaScript with popular frameworks like React, Vue, WPF, .NET, Django, Tkinter and others.
+                        </p>
+                        <a href="/dev.html">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-headphones"></i>
+                        <h4>DJing</h4>
+                        <p>
+                            I just started out DJing, but I can do techno,
+                            and most harder techno styles pretty well. Tried my
+                            luck at pop and house and it also went farely well.    
+                        </p>
+                        <a href="/dj.html">Learn more</a>
+                    </div>
+                    <div>
                         <i class="fa-solid fa-pencil"></i>
-                        <h2>Tutoring</h2>
+                        <h4>Tutoring</h4>
                         <ul>
                             <li>
                                 <p>Programming in Python, C, C++, C#, JavaScript</p>
-                            </li>
+                           </li>
                             <li>
                                 <p>Computer science</p>
                             </li>
@@ -102,25 +127,7 @@
                                 <p>Maths - Middle & High School</p>
                             </li>
                         </ul>
-                        <a href="#">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Software development</h2>
-                        <p>
-                            Create an app or tool, be it for the Web, desktop or mobile using Python, C, C++, C# and JavaScript with popular frameworks like React, Vue, WPF, .NET, Django, Tkinter and others.
-                        </p>
-                        <a href="#">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-headphones"></i>
-                        <h2>DJing</h2>
-                        <p>
-                            I just started out DJing, but I can do techno,
-                            and most harder techno styles pretty well. Tried my
-                            luck at pop and house and it also went farely well.    
-                        </p>
-                        <a href="#">Learn more</a>
+                        <a href="/tsrb.html">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -132,7 +139,7 @@
                     <div class="work">
                         <img src="./assets/liveset1.png" alt="set cover art">
                         <div class="layer">
-                            <h3>Live Set #01 - Hardtechno, Acid</h3>
+                            <h5>Live Set #01 - Hardtechno, Acid</h5>
                             <p>
                                 First live recorded set on my DDJ-200.
                                 Has a few mistakes, but I'm proud
@@ -145,7 +152,7 @@
                     <div class="work">
                         <img src="./assets/auda-sets.png" alt="fexios logo">
                         <div class="layer">
-                            <h3>01/03. peep type shit</h3>
+                            <h5>01/03. peep type shit</h5>
                             <p>Tekk and hardtekk remixes of Lil Peep. My most popular set.</p>
                             <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lubranier/03-peep-type-shit"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
@@ -153,13 +160,13 @@
                     <div class="work">
                         <img src="./assets/auda-sets.png" alt="cudoku logo">
                         <div class="layer">
-                            <h3>02/01. psz smile</h3>
+                            <h5>02/01. psz smile</h5>
                             <p>My one and only frenchcore set. Features mostly Dr. Peacock and Pyrut. Bring back PSZ.</p>
                             <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lubranier/0201-psz-smile"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="button">See more</a>
+                <a href="/dj.html" class="button">See more</a>
             </div>
             <div class="container">
                 <h1 class="subtitle">My software</h1>
@@ -189,34 +196,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="button">See more</a>
-            </div>
-        </div>
-        <div id="contact">
-            <div class="container">
-                <h1 class="subtitle">Contact me</h1>
-                <div class="flex">
-                    <div class="socials">
-                        <a class="link" href="https://github.com/sh0tzz" target="_blank" rel="noreferrer"><i class="fa-brands fa-github "></i></a>
-                        <a class="link" href="https://www.instagram.com/jangrdanjski/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <div class="email" onclick="clipboardCopy('lubranier@gmail.com')">
-                        <div>
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                            <p>lubranier@gmail.com</p>
-                            <p class="tooltip">(Click to copy!)</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="/dev.html" class="button">See more</a>
             </div>
         </div>
     </div>
-
-    <script src="./js/AboutTabs.js"></script>
-    <script src="./js/EmailClipboard.js"></script>
-    <script src="./js/MenuButtons.js"></script>
 </body>
 
 </html>

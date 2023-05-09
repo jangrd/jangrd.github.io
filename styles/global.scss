@@ -1,0 +1,76 @@
+:root {
+    --bg-color-1: #060606;
+    --bg-fade-0: #06060600;
+    --bg-fade-1: #060606ff;
+    --bg-color-2: #1f1f1f;
+    --fg-color-1: #ffffff;
+    --fg-color-2: #ababab;
+    --hi-color-1: #ff004f;
+    --hi-color-2: #b54769;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color-1);
+}
+
+h1, h2, h3, h4, h5, h6, i {
+    color: var(--fg-color-1);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p, li {
+    color: var(--fg-color-2);
+}
+
+span {
+    color: var(--hi-color-1);
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.button {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--hi-color-1);
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--fg-color-1);
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: var(--hi-color-1);
+    }
+}
