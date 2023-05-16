@@ -75,13 +75,13 @@ class NavBar extends HTMLElement {
             ${this.style}
         </style>
         <nav>
-            <a class="logo-link" href="/index.html"><h1 class="text-logo"><span>J</span>an.</h1></a>
+            <a class="logo-link" href="/index"><h1 class="text-logo"><span>J</span>an.</h1></a>
             <ul id="menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/dev.html">Dev</a></li>
-                <li><a href="/dj.html">DJ</a></li>
-                <li><a href="/tsrb.html">TŠRB</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/dev">Dev</a></li>
+                <li><a href="/dj">DJ</a></li>
+                <li><a href="/tsrb">TŠRB</a></li>
+                <li><a href="/about">About</a></li>
                 <i class="fa-solid fa-x" onclick="menuClose()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
