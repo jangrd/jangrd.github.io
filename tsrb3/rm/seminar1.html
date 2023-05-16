@@ -12,170 +12,181 @@
             border-collapse: collapse;
         }
     </style>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/seminar.css">
+    <script src="/components/NavBar.js" defer></script>
 </head>
 
 <body>
-    <a href="../rm.html">Nazad</a>
 
-    <h1>Kriptografija u računalnoj komunikaciji</h1>
-    <h2>Seminar 1 | Jan Grdanjski, 3.c, 22. 1. 2023.</h2>
+    <nav-bar></nav-bar>
+    <div class="container">
+        <a href="../rm.html" style="font-size: 1.5rem">Nazad</a>
+        <div class="spacer"></div>
+        <h1>Kriptografija u računalnoj komunikaciji</h1>
+        <h2>Seminar 1 | Jan Grdanjski, 3.c, 22. 1. 2023.</h2>
 
-    <h3>1. Uvod u kriptografiju</h3>
-    <p>
-        <a href="https://hr.m.wikipedia.org/wiki/Kriptografija">Kriptografija</a>
-je znanost koja se bavi stvaranjem i analizom protokola
-        za sigurnu komunikaciju. Ovaj seminar bavi se kriptografijom isključivo
-        u računalnom smislu. Znanost se dijeli na dvije glavne grane: simetrična i asimetrična
-        kriptografija. Svi korisnici Interneta svakodnevno koriste kriptografiju, a
-        da ni sami nisu toga svjesni. Recimo svaka poruka poslana na WhatsApp-u je enkriptirana.
-        Svaki put kod registracije ili prijave na neke Web servise koristi se enkripcija.
-    </p>
+        <div class="spacer"></div>
 
-    <h3>2. Rječnik</h3>
-    <p>Ovaj rječnik objašnjava često korištene riječi u seminaru.</p>
-    <ul>
-        <li>poruka - neki podatci koji se prenose</li>
-        <li>ključ - neki podatci koji se koriste za enkripciju i/ili dekripciju poruke</li>
-        <li>enkripcija - šifriranje poruke u nerazumne podatke putem ključa</li>
-        <li>dekripcija - dešifriranje nerazumnih podataka u poruku putem ključa</li>
-        <li>simetrična kriptografija - grana kriptografije čiji sistemi imaju samo jedan ključ</li>
-        <li>asimetrična kriptografija - grana kriptografije čiji sistemi imaju dva ključa (tzv. "javni" i "privatni" ključ)</li>
-    </ul>
+        <h3>1. Uvod u kriptografiju</h3>
+        <p>
+            <a href="https://hr.m.wikipedia.org/wiki/Kriptografija">Kriptografija</a>
+    je znanost koja se bavi stvaranjem i analizom protokola
+            za sigurnu komunikaciju. Ovaj seminar bavi se kriptografijom isključivo
+            u računalnom smislu. Znanost se dijeli na dvije glavne grane: simetrična i asimetrična
+            kriptografija. Svi korisnici Interneta svakodnevno koriste kriptografiju, a
+            da ni sami nisu toga svjesni. Recimo svaka poruka poslana na WhatsApp-u je enkriptirana.
+            Svaki put kod registracije ili prijave na neke Web servise koristi se enkripcija.
+        </p>
 
-    <h3>3. Simetrična kriptografija</h3>
-    <p>
-        Standardni simetrični sistemi za enkripciju su 
-        <a href="https://stackoverflow.com/questions/5554526/comparison-of-des-triple-des-aes-blowfish-encryption-for-data">DES, AES, IDEA</a>
-         ,Blowfish i Rivest Cipher-i (RC4, RC5, RC6), no u realnom se svijetu koriste
-        samo AES i varijacija DES-a koja se zove 3DES.
-    </p>
-    <p>
-        <a href="https://www.simplilearn.com/what-is-des-article">DES (Data Encryption Standard)</a>
-je bio prvi standardizirani sistem enkripcije u "modernom"
-        računalstvu. Danas se DES smatra vrlo slabim jer se procesorska snaga računala znatno
-        povećala od pojave DES-a, pa ga je lako probiti brute-force napadima. DES ima svoje
-        varijacije 2DES i 3DES koje umjesto jednog ključa koriste 2 ili 3, ovisno o imenu.
-        3DES je jedini koji se još upotrebljava i to u EMV chipovima koji imaju slabu procesorsku.
-        Takvi chipovi mogu se pronaći na bankovnim karticama i sličnim smart-card uređajima.
-    </p>
-    <p>
-<a href="https://www.geeksforgeeks.org/advanced-encryption-standard-aes/">AES (Advanced Encryption Standard)</a>
- naslijednik DES-a, kreiran kada su se pojavili procesori
-        dovoljno jaki da probiju DES. AES ima 3 varijante: AES-128, AES-192 i AES-256 i oni imaju
-        ključeve duljine 128, 192 i 256 bitova. Što više bitova u ključu, to je algoritam sigurniji,
-        ali i sporiji.
-    </p>
+        <h3>2. Rječnik</h3>
+        <p>Ovaj rječnik objašnjava često korištene riječi u seminaru.</p>
+        <ul>
+            <li>poruka - neki podatci koji se prenose</li>
+            <li>ključ - neki podatci koji se koriste za enkripciju i/ili dekripciju poruke</li>
+            <li>enkripcija - šifriranje poruke u nerazumne podatke putem ključa</li>
+            <li>dekripcija - dešifriranje nerazumnih podataka u poruku putem ključa</li>
+            <li>simetrična kriptografija - grana kriptografije čiji sistemi imaju samo jedan ključ</li>
+            <li>asimetrična kriptografija - grana kriptografije čiji sistemi imaju dva ključa (tzv. "javni" i "privatni" ključ)</li>
+        </ul>
 
-    <h3>3.1. AES algoritam</h3>
-    <p>
-        Za početak AES treba poruku i ključ.
-    </p>
-    <p>
-        Od originalnog ključa (koji može imati 128, 192 ili 256 bitova) se algoritmom stvaraju novi
-        ključevi duljine 128 bitova. Ti ključevi zovu se Round (engl. runda) ključevi. Broj stvorenih
-        Round ključeva ovisi o algoritmu.
-    </p>
-        <table>
-            <tr>
-                <th>Algoritam</th>
-                <th>Round ključevi</th>
-            </tr>
-            <tr>
-                <td>AES-128</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>AES-192</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>AES-256</td>
-                <td>14</td>
-            </tr>
-        </table>
-    <p>
-        Nakon toga uzima se poruka i dijeli se na blokove veličine 128 bitova. Dalje se svaki taj blok
-        od 128 bitova (16 bajtova) zapisuje kao 4x4 tablica (1 bajt po ćeliji). 
-    </p>
-    <p>
-        Sada kreću runde (Rounds). U svakoj rundi će se svaki blok XOR-ati sa ključem te runde.
-        Dalje se generira Lookup Table (tablica zamjene) po kojoj će se svaki bajt bloka zamijeniti
-        nekim drugim bajtom iz tablice. Zatim se redovi pomiču jedan korak. Nakon toga se svaki
-        stupac mijenja novim stupcem koji se dobije matričnim množenjem s dijelom ključa. Ovakve
-        runde se ponavljaju onoliko puta koliko ima Round ključeva.
-    </p>
-    <p>
-        Opisani postupak je postupak enkriptiranja. Postupak dekriptiranja radi jednako kao i on,
-        samo u suprotnom smjeru.
-    </p>
+        <h3>3. Simetrična kriptografija</h3>
+        <p>
+            Standardni simetrični sistemi za enkripciju su 
+            <a href="https://stackoverflow.com/questions/5554526/comparison-of-des-triple-des-aes-blowfish-encryption-for-data">DES, AES, IDEA</a>
+            ,Blowfish i Rivest Cipher-i (RC4, RC5, RC6), no u realnom se svijetu koriste
+            samo AES i varijacija DES-a koja se zove 3DES.
+        </p>
+        <p>
+            <a href="https://www.simplilearn.com/what-is-des-article">DES (Data Encryption Standard)</a>
+    je bio prvi standardizirani sistem enkripcije u "modernom"
+            računalstvu. Danas se DES smatra vrlo slabim jer se procesorska snaga računala znatno
+            povećala od pojave DES-a, pa ga je lako probiti brute-force napadima. DES ima svoje
+            varijacije 2DES i 3DES koje umjesto jednog ključa koriste 2 ili 3, ovisno o imenu.
+            3DES je jedini koji se još upotrebljava i to u EMV chipovima koji imaju slabu procesorsku.
+            Takvi chipovi mogu se pronaći na bankovnim karticama i sličnim smart-card uređajima.
+        </p>
+        <p>
+    <a href="https://www.geeksforgeeks.org/advanced-encryption-standard-aes/">AES (Advanced Encryption Standard)</a>
+    naslijednik DES-a, kreiran kada su se pojavili procesori
+            dovoljno jaki da probiju DES. AES ima 3 varijante: AES-128, AES-192 i AES-256 i oni imaju
+            ključeve duljine 128, 192 i 256 bitova. Što više bitova u ključu, to je algoritam sigurniji,
+            ali i sporiji.
+        </p>
 
-    <h3>4. Asimetrična enkripcija</h3>
-    <p>
-        Asimetrična enkripcija radi sa dva ključa. Javni ključ (public key) za enkripciju i
-        privatni ključ (private key) za dekripciju poruke. Asimetrična enkripcija je vrlo korisna
-        jer se komunikacija uvijek može uspostaviti, a nitko tko nije uključen u nju ne može
-        prisutstvovat, za razliku od simetrične enkripcije gdje je potrebno nekako razmijeniti
-        ključ bez da ga itko sazna. Loša strana asimetrične enkripcije je da je vrlo spora i
-        matematički, a time i procesorski intenzivna.
-    </p>
-    <p>
-        Osnovni koncept asimetrične enkripcije radi ovako. Imamo dvije strane A i B koje trebaju
-        komunicirati. Svatko od njih će generirati 2 ključa, jedan javni i jedan privatni.
-        Javni i privatni ključ su povezani tako da kada jedan nešto dekriptira samo onaj drugi
-        to može dekriptirati. Znači ako je nešto enkriptirano javnim ključem A, to se može
-        dekriptirati samo privatnim ključem A. Ako je nešto enkriptirano privatnim ključem A,
-        može biti dekriptirano samo koristeći se javnim ključem A. Zatim strane A i B šalju
-        svoje javne ključeve na mrežu gdje im bilo tko može pristupiti. Recimo sada da će komunikaciju
-        zatražiti strana A. Ona bi napisala poruku koja glasi "Bok, ja sam A. Možemo li pričati?",
-        enkriptirala bi to javnim ključem strane B koji se nalazi na mreži i poslala to strani B.
-        Strana B bi koristila svoj privatni ključ da pročita tu poruku i napisala bi odgovor:
-        "Da, možemo pričati.", zatim će ju enkriptirati svojim privatnim ključem, a zatim javnim
-        ključem A. Takvu poruku će poslati strani A. Kada strana A čita poruku, prvo će dekriptirati
-        svojim privatnim ključem, a poslije javnim B ključem. Komunikacija je osigurana nakon što
-        strana A pošalje odgovor po istom principu.
-        Ovo radi zato što ako se nešto može dekriptirati javnim ključem B, to mora značiti da je
-        enkriptirano privatnim ključem B. Tako znamo da poruka stvarno dolazi od strane B.
-        Strana B zna da priča sa stranom A jer je njezin odgovor mogla pročitati samo strana A,
-        pošto je bio enkriptiran javnim ključem A.
-    </p>
-    <p>
-        Asimetrični algoritmi se obično kategoriziraju po svojoj ulozi. Algoritmi za razmjenu ključa
-        (koji će se kasnije koristiti za simetričnu enkripciju) zovu se key exchange algoritmi.
-        Neki od njih su X25519, X488 i Diffie-Hellman. Neki se algoritmi koriste za digitalno
-        potpisivanje poruka. Oni su Ed25519, Ed488 i DSA. Postoji još jedan algoritam koji spada
-        u obje grupe i on se zove RSA.
-    </p>
+        <h3>3.1. AES algoritam</h3>
+        <p>
+            Za početak AES treba poruku i ključ.
+        </p>
+        <p>
+            Od originalnog ključa (koji može imati 128, 192 ili 256 bitova) se algoritmom stvaraju novi
+            ključevi duljine 128 bitova. Ti ključevi zovu se Round (engl. runda) ključevi. Broj stvorenih
+            Round ključeva ovisi o algoritmu.
+        </p>
+            <table>
+                <tr>
+                    <th>Algoritam</th>
+                    <th>Round ključevi</th>
+                </tr>
+                <tr>
+                    <td>AES-128</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>AES-192</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>AES-256</td>
+                    <td>14</td>
+                </tr>
+            </table>
+        <p>
+            Nakon toga uzima se poruka i dijeli se na blokove veličine 128 bitova. Dalje se svaki taj blok
+            od 128 bitova (16 bajtova) zapisuje kao 4x4 tablica (1 bajt po ćeliji). 
+        </p>
+        <p>
+            Sada kreću runde (Rounds). U svakoj rundi će se svaki blok XOR-ati sa ključem te runde.
+            Dalje se generira Lookup Table (tablica zamjene) po kojoj će se svaki bajt bloka zamijeniti
+            nekim drugim bajtom iz tablice. Zatim se redovi pomiču jedan korak. Nakon toga se svaki
+            stupac mijenja novim stupcem koji se dobije matričnim množenjem s dijelom ključa. Ovakve
+            runde se ponavljaju onoliko puta koliko ima Round ključeva.
+        </p>
+        <p>
+            Opisani postupak je postupak enkriptiranja. Postupak dekriptiranja radi jednako kao i on,
+            samo u suprotnom smjeru.
+        </p>
 
-    <h3>5. Enkripcija u stvarnoj primjeni</h3>
-    <p>
-        Kada dobro pogledamo obje vrste enkripcije (simetričnu i asimetričnu), svaka ima svoje
-        prednosti i nedostatke. Zato u stvarnome svijetu najčešće koristimo i simetričnu i
-        asimetričnu enkripciju na način da dobijemo prednosti obje vrste bez nedostataka.
-        Dobra strana simetrične enkripcije je njena brzina, a loša strana je to da je nemoguće
-        preko mreže poslati zajednički ključ bez rizika da će ga netko presresti u prolazu, već
-        je potrebno unaprijed u stvarnom svijetu razmijeniti ključ.
-        Dobra strana asimetrične enkripcije je to da se komunikacija može sigurno uspostaviti preko
-        mreže bez rizika presreta ili špijunaže, a loša joj je strana brzina.
-        Zato se u stvarnosti iskoristi asimetrična enkripcija za uspostavu komunikacije i
-        određivanje simetričnog ključa, nakon ćega se sigurno može prijeći na simetričnu enkripciju
-        kod komunikacije.
-    </p>
+        <h3>4. Asimetrična enkripcija</h3>
+        <p>
+            Asimetrična enkripcija radi sa dva ključa. Javni ključ (public key) za enkripciju i
+            privatni ključ (private key) za dekripciju poruke. Asimetrična enkripcija je vrlo korisna
+            jer se komunikacija uvijek može uspostaviti, a nitko tko nije uključen u nju ne može
+            prisutstvovat, za razliku od simetrične enkripcije gdje je potrebno nekako razmijeniti
+            ključ bez da ga itko sazna. Loša strana asimetrične enkripcije je da je vrlo spora i
+            matematički, a time i procesorski intenzivna.
+        </p>
+        <p>
+            Osnovni koncept asimetrične enkripcije radi ovako. Imamo dvije strane A i B koje trebaju
+            komunicirati. Svatko od njih će generirati 2 ključa, jedan javni i jedan privatni.
+            Javni i privatni ključ su povezani tako da kada jedan nešto dekriptira samo onaj drugi
+            to može dekriptirati. Znači ako je nešto enkriptirano javnim ključem A, to se može
+            dekriptirati samo privatnim ključem A. Ako je nešto enkriptirano privatnim ključem A,
+            može biti dekriptirano samo koristeći se javnim ključem A. Zatim strane A i B šalju
+            svoje javne ključeve na mrežu gdje im bilo tko može pristupiti. Recimo sada da će komunikaciju
+            zatražiti strana A. Ona bi napisala poruku koja glasi "Bok, ja sam A. Možemo li pričati?",
+            enkriptirala bi to javnim ključem strane B koji se nalazi na mreži i poslala to strani B.
+            Strana B bi koristila svoj privatni ključ da pročita tu poruku i napisala bi odgovor:
+            "Da, možemo pričati.", zatim će ju enkriptirati svojim privatnim ključem, a zatim javnim
+            ključem A. Takvu poruku će poslati strani A. Kada strana A čita poruku, prvo će dekriptirati
+            svojim privatnim ključem, a poslije javnim B ključem. Komunikacija je osigurana nakon što
+            strana A pošalje odgovor po istom principu.
+            Ovo radi zato što ako se nešto može dekriptirati javnim ključem B, to mora značiti da je
+            enkriptirano privatnim ključem B. Tako znamo da poruka stvarno dolazi od strane B.
+            Strana B zna da priča sa stranom A jer je njezin odgovor mogla pročitati samo strana A,
+            pošto je bio enkriptiran javnim ključem A.
+        </p>
+        <p>
+            Asimetrični algoritmi se obično kategoriziraju po svojoj ulozi. Algoritmi za razmjenu ključa
+            (koji će se kasnije koristiti za simetričnu enkripciju) zovu se key exchange algoritmi.
+            Neki od njih su X25519, X488 i Diffie-Hellman. Neki se algoritmi koriste za digitalno
+            potpisivanje poruka. Oni su Ed25519, Ed488 i DSA. Postoji još jedan algoritam koji spada
+            u obje grupe i on se zove RSA.
+        </p>
 
-    <h3>6. Izvori i poveznice</h3>
-    <ul>
-        <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Cryptography">Cryptography - Wikipedia</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">Symmetric key algorithm - Wikipedia</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public key cryptography - Wikipedia</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://cryptography.io/en/latest/hazmat/primitives/asymmetric/">Asymmetric - Python Cryptography</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://www.geeksforgeeks.org/advanced-encryption-standard-aes/">AES - GeeksforGeeks</a></li>
-    </ul>
+        <h3>5. Enkripcija u stvarnoj primjeni</h3>
+        <p>
+            Kada dobro pogledamo obje vrste enkripcije (simetričnu i asimetričnu), svaka ima svoje
+            prednosti i nedostatke. Zato u stvarnome svijetu najčešće koristimo i simetričnu i
+            asimetričnu enkripciju na način da dobijemo prednosti obje vrste bez nedostataka.
+            Dobra strana simetrične enkripcije je njena brzina, a loša strana je to da je nemoguće
+            preko mreže poslati zajednički ključ bez rizika da će ga netko presresti u prolazu, već
+            je potrebno unaprijed u stvarnom svijetu razmijeniti ključ.
+            Dobra strana asimetrične enkripcije je to da se komunikacija može sigurno uspostaviti preko
+            mreže bez rizika presreta ili špijunaže, a loša joj je strana brzina.
+            Zato se u stvarnosti iskoristi asimetrična enkripcija za uspostavu komunikacije i
+            određivanje simetričnog ključa, nakon ćega se sigurno može prijeći na simetričnu enkripciju
+            kod komunikacije.
+        </p>
 
-    <p>
-        <b>Za one koji žele znati više:</b>
-        <a target="_blank" rel="noreferrer" href="https://www.youtube.com/playlist?list=PL0LZxT9Dgnxfu1ILW0XnLnq3mb0L5mUPr">
-            Cryptography - Computerphile
-        </a>
-    </p>
+        <h3>6. Izvori i poveznice</h3>
+        <ul>
+            <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Cryptography">Cryptography - Wikipedia</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Symmetric-key_algorithm">Symmetric key algorithm - Wikipedia</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public key cryptography - Wikipedia</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://cryptography.io/en/latest/hazmat/primitives/asymmetric/">Asymmetric - Python Cryptography</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.geeksforgeeks.org/advanced-encryption-standard-aes/">AES - GeeksforGeeks</a></li>
+        </ul>
+
+        <p>
+            <b>Za one koji žele znati više:</b>
+            <a target="_blank" rel="noreferrer" href="https://www.youtube.com/playlist?list=PL0LZxT9Dgnxfu1ILW0XnLnq3mb0L5mUPr">
+                Cryptography - Computerphile
+            </a>
+        </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
 </body>
 
 </html>

@@ -61,11 +61,12 @@ span {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 50px auto;
     width: fit-content;
     border: 1px solid var(--hi-color-1);
-    padding: 14px 50px;
+    padding: 14px 30px;
     border-radius: 10px;
     text-decoration: none;
     color: var(--fg-color-1);

@@ -1,0 +1,24 @@
+p, li {
+  color: var(--fg-color-1);
+}
+
+p {
+  margin-left: 50px;
+}
+
+ul {
+  margin-left: 100px;
+}
+
+a {
+  color: var(--hi-color-1);
+}
+
+.spacer {
+  padding: 1px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-top: 20px;
+}/*# sourceMappingURL=seminar.css.map */

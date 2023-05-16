@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jan Grdanjski">
     <title>Jan Grdanjski | Dev</title>
-    <!-- fonts -->
+    <!-- fonts and icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- stylesheets -->
     <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/dev.css">
     <!-- scripts -->
     <script src="/components/NavBar.js" defer></script>
 </head>
@@ -19,8 +21,84 @@
     
     <nav-bar></nav-bar>
     <div class="container">
-        <h1>dev page</h1>
-        <h4>Work in progress</h4>
+        <h1>Software development</h1>
+        <hr>
+        <div class="container">
+            <h3>FexiOS</h3>
+            <p>
+                FexiOS is a work in progress operating system meant for personal computers
+                with modularity and "low-cost" performance in mind. It will try to combine
+                the ease of use of Windows with the system control and modularity of GNU/Linux.
+                Users will be able to make their own world inside their operating system and
+                customize their experience to their own will with "no-code" or "low-code"
+                solutions. Of course not everyone feels like fiddling with their system for
+                a few hours, so FexiOS will offer sensible defaults or presets mimicking
+                the familiar feel of their Windows or MacOS environments.
+            </p>
+            <h5>Target minimal system requirements</h5>
+            <div class="container">
+                <ul>
+                    <li>CPU: Dual Core 32/64 bit @ 1 GHz</li>
+                    <li>RAM: 1 GB</li>
+                    <li>Storage: 2 GB (OS only)</li>
+                    <li>I/O: USB for installation</li>
+                    <li>GPU: Integrated graphics</li>
+                    <li>Display: 800 x 600</li>
+                </ul>
+            </div>
+            <a href="https://github.com/sh0tzz/os" target="_blank" class="button">
+                View on GitHub
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <hr>
+        <div class="container">
+            <h3>SGL (Seagull)</h3>
+            <p>
+                SGL (SDL GUI Library), or by it's more easily pronouncable name Seagull, is
+                a GUI libray for C++ that utalizes SDL. SDL is just a cross-platform library
+                for interracting with I/O devices from your PC. It started out when I was
+                trying to make a simple C / C++ user interface for an app, but I realized
+                it's way more complex than it needs to be. Using popular libraries can be a
+                nightmare, especially because quite a few of them are deprecated or abandoned.
+                Things like Qt and WxWidgets gave me many headaches so I completely gave up
+                on using them. Other options aren't cross-platform or they miss basic
+                funcionality, so I set out to make my own library. Using
+                <a href="https://www.libsdl.org/" target="_blank">
+                    SDL (Simple DirectMedia Layer)
+                </a>
+                the library would easily work on all popular platforms, and setting SGL up
+                would be as simple as setting up SDL and downloading a header file.
+            </p>
+            <h5>Development status - Temporarily halted</h5>
+            <p>
+                Currently the library is semi-abandoned, but I plan on coming back
+                to it in the future with a re-code from scratch. Currently the library
+                relies on C++ exclusive code, which I do not like since I'm a fan of C
+                and I want it to work in C. Initially I chose C++ because it supported
+                OOP, but I've grown to dislike C++ entirely. The library will probably
+                make it's way into FexiOS when GUIs will be needed.
+            </p>
+            <a href="https://github.com/sh0tzz/SGL" target="_blank" class="button">
+                View on GitHub
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <hr>
+        <div class="container">
+            <h3>Cudoku</h3>
+            <p>
+                Cudoku is a CLI recursive Sudoku solver written in C (hence the name Cudoku).
+                It relies on Sudoku having a limited number of possibilities so, as dumb
+                as it may sound, it just tries them all until it finds a solution.
+                That may sound slow, but modern CPUs run at 3-5 GHz so it's capable of
+                solving any puzzle in mere milliseconds.
+            </p>
+            <a href="https://github.com/sh0tzz/cudoku" target="_blank" class="button">
+                View on GitHub
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
     </div>
 
 </body>
