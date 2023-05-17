@@ -91,7 +91,7 @@ class NavBar extends HTMLElement {
         }
         
         #phone-menu {
-            height: 100vh;
+            height: 120vh;
             width: 100%;
             position: fixed;
             z-index: 1;
