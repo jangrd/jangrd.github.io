@@ -48,3 +48,9 @@ p {
     padding: 1px;
     margin-bottom: 100px;
 }
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+}

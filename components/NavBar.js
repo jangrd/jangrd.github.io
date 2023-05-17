@@ -86,6 +86,7 @@ class NavBar extends HTMLElement {
         }
 
         #menu-open {
+            display: none;
             visibility: hidden;
             color: #ffffff;
         }
@@ -114,6 +115,7 @@ class NavBar extends HTMLElement {
                 display: none;
             }
             #menu-open {
+                display: block;
                 visibility: visible;
             }
             nav ul li a:after {
