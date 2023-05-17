@@ -129,24 +129,24 @@ class NavBar extends HTMLElement {
             ${this.style}
         </style>
         <nav>
-            <a class="logo-link" href="/index.html"><h1 class="text-logo"><span>J</span>an.</h1></a>
+            <a class="logo-link" href="/"><h1 class="text-logo"><span>J</span>an.</h1></a>
             <ul id="menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/dev.html">Dev</a></li>
-                <li><a href="/dj.html">DJ</a></li>
-                <li><a href="/tsrb.html">TŠRB</a></li>
-                <li><a href="/about.html">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dev">Dev</a></li>
+                <li><a href="/dj">DJ</a></li>
+                <li><a href="/tsrb">TŠRB</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
             <a id="menu-open" onclick="menuShow()">MENU</a>
             <div id="phone-menu" class="hidden">
                 <div class="vert-space" onclick="menuHide()"></div>
                 <ul>
                     <li><a onclick="menuHide()">X</a></li>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/dev.html">Dev</a></li>
-                    <li><a href="/dj.html">DJ</a></li>
-                    <li><a href="/tsrb.html">TŠRB</a></li>
-                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dev">Dev</a></li>
+                    <li><a href="/dj">DJ</a></li>
+                    <li><a href="/tsrb">TŠRB</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
         </nav>
