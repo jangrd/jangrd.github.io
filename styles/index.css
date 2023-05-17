@@ -245,10 +245,27 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 675px) {
-  .image img {
+@media only screen and (max-width: 1100px) {
+  #about .row .image {
+    margin: auto;
     flex-basis: 100%;
-    margin-bottom: 30px;
+  }
+  #about .row .image img {
+    width: 50%;
+  }
+  #about .row .about-text {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #about .row .image {
+    flex-basis: 100%;
+  }
+  #about .row .image img {
+    width: 80%;
+  }
+  #about .row .about-text {
+    flex-basis: 100%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -256,6 +273,12 @@
     background: url(../assets/phone-background.png) no-repeat 100%;
     background-attachment: scroll;
     background-size: cover;
+  }
+  #about .row .image {
+    flex-basis: 100%;
+  }
+  #about .row .image img {
+    width: 80%;
   }
   #header .header-text {
     margin-top: 100%;
@@ -277,18 +300,6 @@
   #contact .link,
   #contact .email {
     width: 100%;
-  }
-}
-@media only screen and (max-width: 1100px) {
-  #about .row .image {
-    margin: auto;
-    flex-basis: 100%;
-  }
-  #about .row .image img {
-    width: 80%;
-  }
-  #about .row .about-text {
-    flex-basis: 100%;
   }
 }
 @media only screen and (max-width: 500px) {

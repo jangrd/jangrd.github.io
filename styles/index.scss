@@ -243,18 +243,56 @@
     }
 }
 
-@media only screen and (max-width: 675px) {
-    .image img{
-        flex-basis: 100%;
-        margin-bottom: 30px;
+
+@media only screen and (max-width: 1100px) {
+    #about {
+        .row {
+            .image {
+                margin: auto;
+                flex-basis: 100%;
+                img {
+                    width: 50%;
+                }
+            }
+            .about-text {
+                flex-basis: 100%;
+            }
+        }
     }
 }
+
+@media only screen and (max-width: 850px) {
+    #about {
+        .row {
+            .image {
+                flex-basis: 100%;
+                img {
+                    width: 80%;
+                }
+            }
+            .about-text {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: 600px) {
     #parallax {
         background: url(../assets/phone-background.png) no-repeat 100%;
         background-attachment:scroll;
         background-size: cover;
+    }
+    #about {
+        .row {
+            .image {
+                flex-basis: 100%;
+                img {
+                    width: 80%;
+                }
+            }
+        }
     }
     #header {
         .header-text {
@@ -279,23 +317,6 @@
         .link,
         .email {
             width: 100%;
-        }
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    #about {
-        .row {
-            .image {
-                margin: auto;
-                flex-basis: 100%;
-                img {
-                    width: 80%;
-                }
-            }
-            .about-text {
-                flex-basis: 100%;
-            }
         }
     }
 }
