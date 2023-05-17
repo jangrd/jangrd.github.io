@@ -42,8 +42,7 @@
   margin: 20px 0 40px;
 }
 #about .row .about-text .tabs .tab-link {
-  margin-right: 50px;
-  font-size: 1.25rem;
+  margin-right: 30px;
   cursor: pointer;
   position: relative;
 }
@@ -246,6 +245,12 @@
   justify-content: center;
 }
 
+@media only screen and (max-width: 675px) {
+  .image img {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
 @media only screen and (max-width: 600px) {
   #parallax {
     background: url(../assets/phone-background.png) no-repeat 100%;

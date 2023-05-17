@@ -37,4 +37,13 @@
 }
 .content .selector li a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 735px) {
+  .content .selector li h4 {
+    margin-left: 0;
+  }
+  .content .selector li a {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=explorer.css.map */

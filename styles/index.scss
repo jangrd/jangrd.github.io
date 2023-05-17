@@ -38,8 +38,8 @@
                 display: flex;
                 margin: 20px 0 40px;
                 .tab-link {
-                    margin-right: 50px;
-                    font-size: 1.25rem;
+                    margin-right: 30px;
+                    // font-size: 1.25rem;
                     cursor: pointer;
                     position: relative;
                     &::after {
@@ -240,6 +240,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .image img{
+        flex-basis: 100%;
+        margin-bottom: 30px;
     }
 }
 
