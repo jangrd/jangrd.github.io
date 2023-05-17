@@ -5,10 +5,13 @@ class NavBar extends HTMLElement {
         this.template = document.createElement("template");
         this.template.innerHTML = this.markup;
         shadow.append(this.template.content.cloneNode(true));
+        this.menu = document.getElementById('menu');
+        console.log(this.menu);
     }
 
+
     style = /*css*/`
-        * {
+        * :not(i) {
             margin: 0;
             padding: 0;
             font-family: "Poppins", sans-serif;
@@ -65,8 +68,12 @@ class NavBar extends HTMLElement {
         nav ul li a:hover::after {
             width: 100%;
         }
-        nav .fa-bars, nav .fa-x {
-            display: none;
+        
+
+        @media only screen and (max-width: 735px) {
+            nav {
+                background-color: #ff0000;
+            }
         }
     `;
 
@@ -75,18 +82,18 @@ class NavBar extends HTMLElement {
             ${this.style}
         </style>
         <nav>
-            <a class="logo-link" href="/index"><h1 class="text-logo"><span>J</span>an.</h1></a>
+            <a class="logo-link" href="/index.html"><h1 class="text-logo"><span>J</span>an.</h1></a>
             <ul id="menu">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/dev">Dev</a></li>
-                <li><a href="/dj">DJ</a></li>
-                <li><a href="/tsrb">TŠRB</a></li>
-                <li><a href="/about">About</a></li>
-                <i class="fa-solid fa-x" onclick="menuClose()"></i>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/dev.html">Dev</a></li>
+                <li><a href="/dj.html">DJ</a></li>
+                <li><a href="/tsrb.html">TŠRB</a></li>
+                <li><a href="/about.html">About</a></li>
             </ul>
-            <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
+
         </nav>
     `;
 }
+
 
 customElements.define("nav-bar", NavBar);

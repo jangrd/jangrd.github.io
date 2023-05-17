@@ -252,31 +252,6 @@
     background-attachment: scroll;
     background-size: cover;
   }
-  #header nav ul {
-    background-color: #ff004f;
-    position: fixed;
-    top: 0;
-    right: -150px;
-    width: 150px;
-    height: 100vh;
-    padding-top: 50px;
-    z-index: 2;
-    transition: right 0.5s;
-  }
-  #header nav ul li {
-    display: block;
-    margin: 25px;
-  }
-  #header nav ul .fa-x {
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-  #header nav .fa-bars {
-    display: block;
-  }
   #header .header-text {
     margin-top: 100%;
     font-size: 16px;
