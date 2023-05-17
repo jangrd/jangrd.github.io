@@ -1,3 +1,15 @@
+function menuShow() {
+    let nav = document.getElementsByTagName('nav-bar')[0];
+    let phoneMenu = nav.shadowRoot.getElementById('phone-menu');
+    phoneMenu.classList.remove('hidden');
+}
+
+function menuHide() {
+    let nav = document.getElementsByTagName('nav-bar')[0];
+    let phoneMenu = nav.shadowRoot.getElementById('phone-menu');
+    phoneMenu.classList.add('hidden');
+}
+
 class NavBar extends HTMLElement {
     constructor() {
         super();
@@ -68,11 +80,44 @@ class NavBar extends HTMLElement {
         nav ul li a:hover::after {
             width: 100%;
         }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        #menu-open {
+            visibility: hidden;
+            color: #ffffff;
+        }
         
+        #phone-menu {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            display: flex;
+        }
+        #phone-menu ul {
+            width: 33%;
+            background-color: #ff004f;
+            display: flex;
+            flex-direction: column;
+        }
+        .vert-space {
+            position: relative;
+            width: 67%;
+        }
 
         @media only screen and (max-width: 735px) {
-            nav {
-                background-color: #ff0000;
+            #menu {
+                display: none;
+            }
+            #menu-open {
+                visibility: visible;
+            }
+            nav ul li a:after {
+                background-color: #000000;
             }
         }
     `;
@@ -90,7 +135,18 @@ class NavBar extends HTMLElement {
                 <li><a href="/tsrb.html">TŠRB</a></li>
                 <li><a href="/about.html">About</a></li>
             </ul>
-
+            <a id="menu-open" onclick="menuShow()">MENU</a>
+            <div id="phone-menu" class="hidden">
+                <div class="vert-space" onclick="menuHide()"></div>
+                <ul>
+                    <li><a onclick="menuHide()">X</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/dev.html">Dev</a></li>
+                    <li><a href="/dj.html">DJ</a></li>
+                    <li><a href="/tsrb.html">TŠRB</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </div>
         </nav>
     `;
 }
