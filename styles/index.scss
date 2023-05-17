@@ -269,20 +269,6 @@
     .subtitle {
         font-size: 40px;
     }
-    .row {
-        .image {
-            flex-basis: 100%;
-            margin-bottom: 30px;
-        }
-        .about-text {
-            flex-basis: 100%;
-            font-size: 14px;
-            .tabs .tab-link {
-                font-size: 16px;
-                margin-right: 20px;
-            }
-        }
-    }
     #contact {
         .flex {
             flex-direction: column;
@@ -293,6 +279,38 @@
         .link,
         .email {
             width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #about {
+        .row {
+            .image {
+                margin: auto;
+                flex-basis: 100%;
+                img {
+                    width: 80%;
+                }
+            }
+            .about-text {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #about {
+        .row {
+            flex-direction: column;
+            .about-text {
+                font-size: 14px;
+                .tabs .tab-link {
+                    font-size: 16px;
+                    margin-right: 20px;
+                }
+            }
         }
     }
 }

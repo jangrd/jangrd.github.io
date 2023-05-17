@@ -268,18 +268,6 @@
   .subtitle {
     font-size: 40px;
   }
-  .row .image {
-    flex-basis: 100%;
-    margin-bottom: 30px;
-  }
-  .row .about-text {
-    flex-basis: 100%;
-    font-size: 14px;
-  }
-  .row .about-text .tabs .tab-link {
-    font-size: 16px;
-    margin-right: 20px;
-  }
   #contact .flex {
     flex-direction: column;
   }
@@ -289,5 +277,29 @@
   #contact .link,
   #contact .email {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #about .row .image {
+    margin: auto;
+    flex-basis: 100%;
+  }
+  #about .row .image img {
+    width: 80%;
+  }
+  #about .row .about-text {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #about .row {
+    flex-direction: column;
+  }
+  #about .row .about-text {
+    font-size: 14px;
+  }
+  #about .row .about-text .tabs .tab-link {
+    font-size: 16px;
+    margin-right: 20px;
   }
 }/*# sourceMappingURL=index.css.map */
