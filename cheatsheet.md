@@ -197,3 +197,132 @@ std::cout << x;
 std::cout << Prvi::x;
 std::cout << Prvi::Drugi::x;
 ```
+# Kopirni konstruktor
+Koristi se kada se stvara novi objekt pomocu vec postojeceg objekta na nacin da se kopiraju sva svojstva. Defaultna implementacija vrsi shallow-copy sto je problem kod klasa koje kao svojstvo imaju pointer. Zato se rucno radi deep-copy.
+```cpp
+NekaKlasa(const NekaKlasa& other) {
+	// za obicna svojstva:
+	// 		kopirati ih pomocu obicnog pridruzivanja (=)
+	// za pointer svojstva:
+	//		stvoriti lokalnu kopiju jednake velicine
+	//		prebaciti elemente iz other u this
+}
+```
+```cpp
+class Podatci {
+public:
+	int count;
+	int* data;
+	Podatci(const Podatci& other) {
+		this->count = other.count;
+		this->data = new int[other.count];
+		for (int i = 0; i < other.count; i++) {
+			this->data[i] = other.data[i];
+		}
+	}
+	~Podatci() {
+		delete this->data;
+	}
+};
+```
+
+# Kopirni operator pridruzivanja
+Overloadanje implicitnog operatora jednako koji vrsi shallow-copy sa nasim operatorom koji vrsi deep-copy. Uvijek je potrebno provjeriti za self-assignment.
+```cpp
+NekaKlasa& operator = (const NekaKlasa& other) {
+	if (this != &other) {
+		// izbrisati postojece podatke
+		// za obicna svojstva:
+		//		kopirati ih pomocu obicnog pridruzivanja (=)
+		// za pointer svojstva:
+		//		stvoriti memoriju za nove podatke
+		//		popuniti memoriju s novim podatcima
+	}
+	return *this;
+}
+```
+```cpp
+class Podatci {
+public:
+	int count;
+	int* data;
+	Podatci& operator = (const Podatci& other) {
+		if (this != &other) {
+			delete data;
+			this->count = other.count;
+			this->data = new int[other.count];
+			for (int i = 0; i < other.count; i++) {
+				this->data[i] = other.data[i];
+			}
+		}
+		return *this;		
+	}
+	~Podatci() {
+		delete this->data;
+	}
+};
+```
+
+# Prijenosni konstruktor
+Prijenosni konstruktor se koristi za optimizaciju programa tako da se manji broj potrebnih alokacija memorije i prebacivanja podataka.
+```cpp
+NekKlasa(NekaKlasa&& temp){
+	// za obicna svojstva:
+	//		kopirati ih pomocu obicnog pridruzivanja (=)
+	// za pointer svojstva:
+	//		prebaciti pointer iz temp u this
+	//		pointer u temp postaviti na nullptr
+	//		(tako se izbjegava double-free memorije)
+}
+```
+```cpp
+class Podatci {
+public:
+	int count;
+	int* data;
+	Podatci(Podatci&& temp) {
+		this->count = temp.count;
+		this->data = temp.data;
+		temp.data = nullptr;
+	}
+	~Podatci() {
+		delete this->data;
+	}
+};
+```
+
+# Prijenosni operator pridruzivanja
+Implementira `std::move()` funkcionalnost
+```cpp
+NekaKlasa& operator = (NekaKlasa&& temp) noexcept {
+	if (this != &other) {
+		// dealocirati vec postojecu memoriju
+		// za obicna svojstva:
+		//		kopirati ih pomocu obicnog pridruzivanja (=)
+		// za pointer svojstva:
+		//		prebaciti pointer iz temp u this
+		//		pointer u temp postaviti na nullptr
+		//		(tako se izbjegava double-free memorije)
+	}
+	return *this;
+}
+```
+```cpp
+class Podatci {
+public:
+	int count;
+	int* data;
+	Podatci& operator = (Podatci&& temp) noexcept {
+		if (this != &other) {
+			delete this->data;
+			this->count = temp.count;
+			this->data = temp.data;
+			temp.data = nullptr;
+		}
+		return *this;
+	}
+	~Podatci() {
+		delete this->data;
+	}
+};
+```
