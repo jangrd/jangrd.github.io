@@ -8,6 +8,8 @@ function getCookie() {
 }
 
 function clearData() {
+    const ok = confirm("Are you sure? You will lose ALL data");
+    if (!ok) return;
     document.cookie = "kamatomat=; path=/; max-age=0";
     players = [];
     updateTable();
