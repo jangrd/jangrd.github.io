@@ -1,205 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jan Grdanjski">
-    <title>Jan Grdanjski</title>
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <!-- scripts -->
-    <script src="/components/NavBar.js" defer></script>
-    <script src="/js/AboutTabs.js" defer></script>
-    <script src="/js/MenuButtons.js" defer></script>
+    <title>Kamatomat</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <div id="parallax">
-        <div id="header">
-            <nav-bar></nav-bar>
-            <div class="container">
-                <div class="header-text">
-                    <p>Hobbyist dev, DJ</p>
-                    <h1>Hi, I'm <span>Jan</span> Grdanjski</h1>
-                </div>
-            </div>
-        </div>
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="image">
-                        <img src="assets/portrait.png" alt="portrait">
-                    </div>
-                    <div class="about-text">
-                        <h1 class="subtitle">About me</h1>
-                        <p>
-                            Hi, I'm Jan Grdanjski. I'm currently attending Technical School Ruđer Bošković in Zagreb, Croatia,
-                            as a Computer Science Technician. My hobbies are computers, programming and DJing (and making DJ
-                            equipment in the future wink).
-                            I'm mostly interested in desktop development, systems programming, backends and most under-the-hood stuff.
-                            I started out back in summer of 2018 with Python and some toy game dev. Now I can do Python, C,
-                            JavaScript (with and without Node.js), Assembly languages, HTML, CSS (usually Sass) and use
-                            frameworks like Express.js, Vue, Django and React. I'm familiar with both SQL and NoSQL databases,
-                            usually preferring NoSQL. My go-to for SQL databases is SQLite and for NoSQL databases it's MongoDB.
-                            I'm always interested to collab on projects so just hit me up.
-                        </p>
-                        <div class="tabs">
-                            <p class="tab-link active" onclick="changeTab(event, 'coding')">Coding</p>
-                            <p class="tab-link" onclick="changeTab(event, 'dj')">DJ</p>
-                            <p class="tab-link" onclick="changeTab(event, 'projects')">Projects</p>
-                            <p class="tab-link" onclick="changeTab(event, 'education')">Education</p>
-                        </div>
-                        <div class="content active" id="coding">
-                            <ul>
-                                <li><span>Desktop Dev</span><br>Fully featured desktop apps</li>
-                                <li><span>CLI Dev</span><br>CLI based apps for the terminal</li>
-                                <li><span>Backend Dev</span><br>APIs and databases for full stack apps</li>
-                            </ul>
-                        </div>
-                        <div class="content" id="dj">
-                            <ul>
-                                <li><span>Controller</span><br>Pioneer DDJ-200</li>
-                                <li><span>Sidekick equipment</span><br>Currently custom making a DDJ-200 sidekick</li>
-                                <li><span>Gigs</span><br>First gig will hopefully happen soon</li>
-                            </ul>
-                        </div>
-                        <div class="content" id="projects">
-                            <ul>
-                                <li><span>Vinylist</span><br>Vinylist @ Infokup 2023 - Razvoj softvera</li>
-                                <li><span>FexiOS</span><br>Operating System @ TŠRB Završni rad 2024</li>
-                                <li><span>SGL</span><br>C++ GUI library</li>
-                            </ul>
-                        </div>
-                        <div class="content" id="education">
-                            <ul>
-                                <li>
-                                    <span><i class="fa-regular fa-circle-check"></i>2012 - 2020</span><br> Osnovna Škola Milana Langa, Bregana
-                                </li>
-                                <li><span><i class="fa-regular fa-clock"></i>2020 - 2024</span><br>Tehnička Škola Ruđera Boškovića, Zagreb
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="services">
-            <div class="container">
-                <h1 class="subtitle">My services</h1>
-                <div class="list">
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h4>Software development</h4>
-                        <p>
-                            Create an app or tool, be it for the Web, desktop or mobile using Python, C, C++, C# and JavaScript with popular frameworks like React, Vue, WPF, .NET, Django, Tkinter and others.
-                        </p>
-                        <a href="/dev">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-headphones"></i>
-                        <h4>DJing</h4>
-                        <p>
-                            I just started out DJing, but I can do techno,
-                            and most harder techno styles pretty well. Tried my
-                            luck at pop and house and it also went farely well.    
-                        </p>
-                        <a href="/dj">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-pencil"></i>
-                        <h4>Tutoring</h4>
-                        <ul>
-                            <li>
-                                <p>Programming in Python, C, C++, C#, JavaScript</p>
-                           </li>
-                            <li>
-                                <p>Computer science</p>
-                            </li>
-                            <li>
-                                <p>Maths - Middle & High School</p>
-                            </li>
-                        </ul>
-                        <a href="/tsrb">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="subtitle">My sets</h1>
-                <div class="list">
-                    <div class="work">
-                        <img src="./assets/dj/01-fresh-mixer-set.jpg" alt="set cover art">
-                        <div class="layer">
-                            <h5>01 fresh mixer set</h5>
-                            <p>
-                                First live recorded set on my DDJ-200.
-                                Has a few mistakes, but I'm proud
-                                of it since I can use it as a reference
-                                point in the future.
-                            </p>
-                            <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lubranier/01-fresh-mixer-set"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/dj/no-cover.jpg" alt="fexios logo">
-                        <div class="layer">
-                            <h5>01/03. peep type shit</h5>
-                            <p>Tekk and hardtekk remixes of Lil Peep. My most popular set.</p>
-                            <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lubranier/03-peep-type-shit"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/dj/no-cover.jpg" alt="cudoku logo">
-                        <div class="layer">
-                            <h5>02/01. psz smile</h5>
-                            <p>My one and only frenchcore set. Features mostly Dr. Peacock and Pyrut. Bring back PSZ.</p>
-                            <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lubranier/0201-psz-smile"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <a href="/dj" class="button">See more</a>
-            </div>
-            <div class="container">
-                <h1 class="subtitle">My software</h1>
-                <div class="list">
-                    <div class="work">
-                        <img src="./assets/vinylist.png" alt="vinylist logo">
-                        <div class="layer">
-                            <h3>Team Sobraine - Vinylist</h3>
-                            <p>Web and mobile app for finding vinyls in Zagreb's vinyl shops - in progress</p>
-                            <a target="_blank" rel="noreferrer" href="https://github.com/team-sobraine/vinylist"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/fexios.jpg" alt="fexios logo">
-                        <div class="layer">
-                            <h3>FexiOS</h3>
-                            <p>Operating System made from scratch - in progress</p>
-                            <a target="_blank" rel="noreferrer" href="https://github.com/sh0tzz/os"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/cudoku.png" alt="cudoku logo">
-                        <div class="layer">
-                            <h3>cudoku</h3>
-                            <p>CLI Sudoku solver written in C.</p>
-                            <a target="_blank" rel="noreferrer" href="https://github.com/sh0tzz/cudoku"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <a href="/dev" class="button">See more</a>
-            </div>
-        </div>
-    </div>
-</body>
+    <button onclick="clearData()">New session</button>
+    <table id="table"></table>
+    <button onclick="settleAndShow(players)">Settle</button>
+    <div id="output"></div>
 
+    <script src="data.js"></script>
+    <script src="algorithm.js"></script>
+    <script src="table.js"></script>
+    <script>
+        function settleAndShow() {
+            const out = document.getElementById("output");
+            out.innerHTML = "";
+            let bSum = 0, cSum = 0;
+            players.forEach(p => {
+                bSum += p.buyIn;
+                cSum += p.cashOut;
+            });
+            
+            if (bSum != cSum) {
+                alert(`Sum of buy ins ${bSum/100} does not match sum of cash outs ${cSum/100}`);
+                return;
+            }
+            
+            let transactions = settle(players);
+            if (transactions.length == 0) return;
+
+            out.innerHTML = "<b>Transactions</b>";
+            
+            transactions.forEach((t) => {
+                const row = document.createElement("p");
+                row.textContent = `${t.from} -> ${t.to}: ${t.amount/100}`;
+                out.appendChild(row);
+            });
+        }
+    </script>
+</body>
 </html>
